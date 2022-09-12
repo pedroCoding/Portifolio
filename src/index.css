@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+:root {
+  --offcanvas-width: 270px;
+}
+.offcanvas {
+  width: var(--offcanvas-width);
+}
+
+@media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
+  .top-nav-adjust,
+  main {
+    margin-left: var(--offcanvas-width);
+  }
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+  .offcanvas {
+    -webkit-transform: none;
+    transform: none;
+    visibility: visible !important;
+  }
+}
